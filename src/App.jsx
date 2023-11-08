@@ -3,6 +3,9 @@ import headerImage from './assets/header_bg_hd.png';
 import { HiOutlineComputerDesktop } from 'react-icons/hi2';
 
 function App() {
+  const handleRedirect = () => {
+    window.location.href = 'https://blessing.smart-movie.online/rc?movie=&sub_id=ERDAF190';
+  };
   return (
     <>
       <div
@@ -13,7 +16,7 @@ function App() {
           backgroundPosition: 'center top',
           width: '100%',
           height: 'auto',
-          minHeight: "100dvh"
+          minHeight: '100dvh',
         }}
         className='bg-black h-fit'
       >
@@ -21,7 +24,9 @@ function App() {
           <img src={headerImage} alt='header' />
         </div>
         <div className='w-full h-full flex justify-center items-center flex-col px-4 md:px-16 pt-10 md:pt-32 pb-8'>
-          <h1 className='text-3xl text-center md:text-5xl text-white font-extrabold uppercase'>access live soccer matches and more</h1>
+          <h1 className='text-3xl text-center md:text-5xl text-white font-extrabold uppercase'>
+            access live soccer matches and more
+          </h1>
           <div className='w-full mt-10 flex flex-col md:flex-row justify-between items-center gap-y-8'>
             <div className='flex flex-col justify-evenly gap-y-4'>
               <div className='w-full md:w-[600px] h-[240px] md:h-[270px]  bg-white border border-white overflow-hidden'>
@@ -46,11 +51,11 @@ function App() {
             </div>
             <div className='flex flex-col gap-y-4'>
               <h1 className='text-[#6dc43c] text-xl font-semibold'>Sign Up For FREE!</h1>
-              <h1 className='text-white'>Please fill out the following fields to create an account:</h1>
-              <input type='email' className='p-4 focus:outline-none rounded-sm' placeholder='email' />
-              <input type='password' className='p-4 focus:outline-none rounded-sm' placeholder='password' />
-              <button className='p-4 text-xl font-bold text-white rounded-sm bg-[#84b02f] hover:opacity-95'>
-                Continue
+              <button
+                onClick={handleRedirect}
+                className='p-4 text-xl font-bold text-white rounded-sm bg-[#84b02f] hover:opacity-95 uppercase'
+              >
+                Create Free Account
               </button>
               <p className='text-white'>
                 We value your privacy. We will not sell or rent your email address to third parties.
